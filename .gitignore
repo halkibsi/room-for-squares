@@ -1,0 +1,9 @@
+# Package manager directories
+js/lib
+node_modules
+
+# Built Files
+style/build.css
+
+# Temporary Files
+*.orig

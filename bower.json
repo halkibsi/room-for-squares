@@ -1,0 +1,7 @@
+{
+  "name": "room-for-squares",
+  "devDependencies": {
+    "jquery": "~1.10.2",
+    "lodash": "~2.4.1"
+  }
+}
