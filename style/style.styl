@@ -1,1 +1,27 @@
 @import 'nib';
+
+rectangle-width = 150px;
+rectangle-height = 250px;
+
+// Color Stuff
+// rectangle-color = #F0EDDC; // PALE
+rectangle-color = #1D1800;
+// rectangle-color = black; // BLACK
+rectangle-opacity = 0.1;
+rectangle-bg-color = rgba(
+	red( rectangle-color ),
+	green( rectangle-color ),
+	blue( rectangle-color ),
+	rectangle-opacity
+);
+
+div {
+	background: rectangle-bg-color;
+	border: 1px solid #aaa;
+	margin-left: -( rectangle-width / 2 )
+	margin-top: -( rectangle-height / 2 );
+	position: absolute;
+	height: rectangle-height * 1;
+	width: rectangle-width * 1;
+	box-shadow: 0 0 20px 1px rgba( 0, 0, 0, .5 );
+}
