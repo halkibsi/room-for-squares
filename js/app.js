@@ -23,6 +23,7 @@
 
 	function makeRect( index ) {
 		var offset, position,
+			yRandomOffset = 150,
 			$div = $('<div/>');
 
 		offset = {
@@ -32,7 +33,7 @@
 
 		position = {
 			left: origin.x + offset.x + Math.random( now ) * 20 - 10,
-			top: origin.y + Math.random( now ) * 20 - 10
+			top: origin.y + Math.random( now ) * yRandomOffset - yRandomOffset / 2
 		};
 
 		if ( rtl ) {
