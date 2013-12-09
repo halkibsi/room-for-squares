@@ -43,7 +43,7 @@
 
 	function makeRow( index ) {
 		origin = {
-			x: rectangle.width / 3,
+			x: rectangle.width / 3 + index * screen.width / 40,
 			y: rectangle.height / 3 + index * rectangle.height / 3
 		};
 
@@ -51,6 +51,10 @@
 		_.times( numX, makeRect );
 		rtl = true;
 		_.times( numX, makeRect);
+
+		numX = 1 === numX ? 1 : numX - 1;
+
+		console.log(numX);
 	}
 
 	_.times( 20, makeRow );
