@@ -2,6 +2,7 @@
 (function( $ ) {
 	var origin, screen, rectangle, rtl,
 		numX = 20,
+		taper = false,
 		now = new Date(),
 		$window = $( window );
 
@@ -43,7 +44,7 @@
 
 	function makeRow( index ) {
 		origin = {
-			x: rectangle.width / 3 + index * screen.width / 40,
+			x: rectangle.width / 3 + ( taper ? index * screen.width / 40 : 0 ),
 			y: rectangle.height / 3 + index * rectangle.height / 3
 		};
 
@@ -52,9 +53,9 @@
 		rtl = true;
 		_.times( numX, makeRect);
 
-		numX = 1 === numX ? 1 : numX - 1;
-
-		console.log(numX);
+		if ( taper ) {
+			numX = 1 === numX ? 1 : numX - 1;
+		}
 	}
 
 	_.times( 20, makeRow );
